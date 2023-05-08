@@ -1,0 +1,45 @@
+<%- include('templates/header'); %>
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 offset-md-3">
+        <h1 class="text-center m-5">Log In</h1>
+        <form action="/loggingin" method="post">
+          <div class="form-group m-3">
+            <label for="formBasicUsername">Email</label>
+            <input
+              type="text"
+              name="email"
+              id="formBasicUsername"
+              class="form-control"
+              placeholder="Enter email"
+            />
+          </div>
+  
+          <div class="form-group m-3">
+            <label for="formBasicPassword">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="formBasicPassword"
+              class="form-control"
+              placeholder="Password"
+            />
+          </div>
+  
+          <button type="submit" class="btn btn-primary">
+            Log In
+          </button>
+        </form>
+        <% if (locals.error) { %>
+          <% if (locals.error === '1') { %>
+            <p class="text-danger">Wrong password. Please try again.</p>
+          <% } else if (locals.error === '2') { %>
+            <p class="text-danger">User not found. Please try again.</p>
+          <% } else if (locals.error === '3') {%>
+            <p class="text-danger">Invalid format.</p>
+        <% }} %>
+      </div>
+    </div>
+  </div>
+  
+  <%- include("templates/footer") %> 

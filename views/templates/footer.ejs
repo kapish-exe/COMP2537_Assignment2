@@ -1,0 +1,31 @@
+<% const socialLinks = [
+  { href: "https://www.instagram.com", text: "Instagram" },
+  { href: "https://www.facebook.com", text: "Facebook" },
+  { href: "https://www.twitter.com", text: "Twitter" }
+]; %>
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="row w-100">
+      <div class="col-md-6 d-flex align-items-center">
+        <span class="mb-3 mb-md-0 text-muted">© 2023 Kapish, Inc</span>
+      </div>
+      <div class="col-md-6 d-flex justify-content-md-end">
+        <ul class="list-group list-group-horizontal">
+          <% socialLinks.forEach(link => { %>
+            <li class="list-group-item">
+              <a href="<%= link.href %>" target="_blank" rel="noopener noreferrer">
+                <%= link.text %>
+              </a>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

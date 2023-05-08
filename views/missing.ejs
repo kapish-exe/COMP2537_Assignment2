@@ -1,0 +1,10 @@
+<%- include('templates/header'); %>
+<% if (missingfields === 1) { %>
+    <p>Name is Required</p>
+<% } else if (missingfields === 2) { %>
+    <p>Email is Required</p>
+<% } else if (missingfields === 3) { %>
+    <p>Password is Required</p>
+<% } %>
+
+<%- include("templates/footer") %> 

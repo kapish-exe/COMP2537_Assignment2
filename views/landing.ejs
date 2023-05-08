@@ -1,0 +1,30 @@
+<%- include('templates/header') %>
+<% const heroStyle = `
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+`; %>
+
+<div style= "<%= heroStyle %>">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Authoriztion & Authentication</h1>
+        <p>This app is a demo of how authorization is different from authentication and how to use them.</p>
+      </div>
+      <div>
+        <img src="/landing.jpg" style="height: 250px; width: 250px; z-index: -2;" alt="">
+      </div>
+      <div style="padding-top: 5rem;" class="col">
+        <a href="/signup" class="btn btn-primary m-3">Sign Up</a>
+        <a href="/login" class="btn btn-primary m-3">Log In</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("templates/footer") %> 
