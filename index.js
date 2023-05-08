@@ -180,7 +180,7 @@ app.get('/admin', async (req, res) => {
       }
       if (req.session.user.userType !== "admin") {
         console.log("User not admin, redirecting to members page");
-        res.redirect("/errorpage");
+        res.render("errorpage");
         return;
       }
     
